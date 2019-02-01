@@ -91,6 +91,7 @@ def main():
     checkport = config.HA_CHECK_PORT
     checkuser = config.HA_CHECK_USER
     listenport = config.HA_LISTEN_PORT
+    listenport_slave = config.HA_LISTEN_PORT_SLAVE
     statsuser = config.HA_STATS_USER
     statspassword = config.HA_STATS_PASSWORD
     vipip = config.HA_VIP_IP
@@ -113,6 +114,7 @@ def main():
         "<%= @bn.stats_password %>": statspassword,
         "<%= @bn.checkuser %>": checkuser,
         "<%= @bn.listenport %>": listenport,
+        "<%= @bn.listenport_slave %>": listenport_slave,
         "<%= @bn.checkuserlen %>": str(utf8len(checkuser)+1),
         "<%= @bn.totalsize %>": str(d),
         "<%= @bn.vipip %>": vipip,
